@@ -72,3 +72,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan migrate
 - il faut décommenter dans le fichier kernel.php au niveau de l'api: \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
 - dans le ficher cors.php il faut ramener à  **true** : 'supports_credentials' => false,
+
+
+## Quand on travaille en l'utilisant une app back, on parle  de sanctum et de fortify
+
+- sanctum  c'est ce qui configure laravel pour qu'il accepte desormais des inter-actions venant de nos app monolitique, frontend, et faire en sorte qu'on utilise les cookier
+                   
+
+- Laravel fortify cré toutes les fonctionnalité nécessaire par défaut pour l'auth
