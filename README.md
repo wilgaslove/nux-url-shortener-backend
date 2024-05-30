@@ -66,12 +66,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## Pour la configuration de sanctum enfin d'utiliser laravl comme un API:
-- passe la commande: **php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"**
-- changer le nom de la BDD
-- php artisan migrate
-- il faut décommenter dans le fichier kernel.php au niveau de l'api: \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-- dans le ficher cors.php il faut ramener à  **true** : 'supports_credentials' => false,
+
 
 
 ## Quand on travaille en l'utilisant une app back, on parle  de sanctum et de fortify
@@ -80,3 +75,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
                    
 
 - Laravel fortify cré toutes les fonctionnalité nécessaire par défaut pour l'auth
+
+
+ **l'installation et  configuration de sanctum:** 
+- passe la commande: **php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"**
+- changer le nom de la BDD
+- php artisan migrate
+- il faut décommenter dans le fichier kernel.php au niveau de l'api: \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+- dans le ficher cors.php il faut ramener à  **true** : 'supports_credentials' => false,
+
+
+**l'installation et configuration de fortify**
+-il faut la commande: composer require laravel/fortify
+-il faut la commande: php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+-il faut la commande: php artisan migrate
