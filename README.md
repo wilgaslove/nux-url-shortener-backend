@@ -89,3 +89,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 -il faut la commande: composer require laravel/fortify
 -il faut la commande: php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
 -il faut la commande: php artisan migrate
+-il faut  ajouter dans le fichier app.php au niveau de provider dans le dossier config: **App\Providers\FortifyServiceProvider::class,**
