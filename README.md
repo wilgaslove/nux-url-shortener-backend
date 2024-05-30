@@ -64,3 +64,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Pour la configuration de sanctum enfin d'utiliser laravl comme un API:
+- passe la commande: **php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"**
+- changer le nom de la BDD
+- php artisan migrate
+- il faut décommenter dans le fichier kernel.php au niveau de l'api: \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
+- dans le ficher cors.php il faut ramener à  **true** : 'supports_credentials' => false,
